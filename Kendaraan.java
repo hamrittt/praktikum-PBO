@@ -21,4 +21,10 @@ public class Kendaraan {
 			this.food.calorie++;
 		}
 	}
+    public int getCalorie() {
+        if (this.food != null) {
+            return this.food.calorie;
+        }
+        return 0;
+    }
 }

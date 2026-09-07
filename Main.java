@@ -8,7 +8,7 @@ public class Main {
 		aceng.jalan("waaaaaa");
 		aceng.jalan("wooooo");
 
-		System.out.println(aceng.food.calorie);
-		System.out.println(gtr.food.calorie);
+		System.out.println(aceng.getCalorie());
+		System.out.println(gtr.getCalorie());
 	}
 }

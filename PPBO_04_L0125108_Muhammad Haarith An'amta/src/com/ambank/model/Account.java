@@ -24,6 +24,9 @@ public class Account {
     // TODO 8: Buat objek Card baru dan simpan ke this.card (validasi jika sudah punya kartu)
     public void issueCard(String pin) {
         // TODO 8: implementasikan issueCard di sini
+        if (this.card == null) {
+            this.card = new Card(this.nameHolder, pin);
+        }
     }
 
     public Card getCard() {
@@ -36,6 +39,9 @@ public class Account {
 
     public void setNameHolder(String nameHolder) {
         // TODO 6: validasi nama tidak boleh null atau kosong
+        if (nameHolder != null && !nameHolder.trim().isEmpty()) {
+            this.nameHolder = nameHolder;
+        }
     }
 
     public String getRekening() {
@@ -49,7 +55,7 @@ public class Account {
     // TODO 9: Return TRANSFER_LIMIT (disiapkan untuk di-override di BusinessAccount)
     public int getTransferLimit() {
         // TODO 9: kembalikan TRANSFER_LIMIT
-        return 0;
+        return TRANSFER_LIMIT;
     }
 
     // TODO 10: Tampilkan info kartu jika ada (nomor tersensor)
@@ -61,7 +67,10 @@ public class Account {
         System.out.println("Saldo    : " + this.getSaldo());
 
         // TODO 10: jika this.card != null, cetak nomor kartu di sini
-
+        if (this.card != null) {
+            String status = this.card.isBlocked() ? "Terblokir" : "Aktif";
+            System.out.println("Kartu ATM " + this.card.getMaskedCardNumber() + " : " + status);
+        }
         System.out.println("================================");
     }
 }

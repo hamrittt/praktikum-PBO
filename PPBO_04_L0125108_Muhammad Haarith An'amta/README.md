@@ -17,11 +17,11 @@ Hai Juga
 - [x] **TODO 5**: Implementasikan data masking pada `getMaskedCardNumber()` (12 digit pertama disensor `****-****-****-XXXX`).
 
 ### 2. File `com.ambank.model.Account`
-- [ ] **TODO 6**: Ubah `nameHolder` menjadi `private`, buat getter dan setter dengan validasi nama tidak boleh kosong.
-- [ ] **TODO 7**: Tambahkan atribut `private Card card;` dan getter `getCard()`.
-- [ ] **TODO 8**: Implementasikan method `issueCard(String pin)` untuk menginstansiasi objek `Card` dan menyimpannya ke `this.card`.
-- [ ] **TODO 9**: Pahami method `getTransferLimit()` yang disiapkan untuk di-override oleh kelas turunan.
-- [ ] **TODO 10**: Perbarui method `displayAccount()` agar mencetak informasi kartu ATM (Nomor masked dan status AKTIF/TERBLOKIR).
+- [x] **TODO 6**: Ubah `nameHolder` menjadi `private`, buat getter dan setter dengan validasi nama tidak boleh kosong.
+- [x] **TODO 7**: Tambahkan atribut `private Card card;` dan getter `getCard()`.
+- [x] **TODO 8**: Implementasikan method `issueCard(String pin)` untuk menginstansiasi objek `Card` dan menyimpannya ke `this.card`.
+- [x] **TODO 9**: Pahami method `getTransferLimit()` yang disiapkan untuk di-override oleh kelas turunan.
+- [x] **TODO 10**: Perbarui method `displayAccount()` agar mencetak informasi kartu ATM (Nomor masked dan status AKTIF/TERBLOKIR).
 
 ### 3. File `com.ambank.model.BusinessAccount`
 - [ ] **TODO 11**: Tambahkan konstanta `BUSINESS_TRANSFER_LIMIT = 50000000;`.

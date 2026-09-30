@@ -24,11 +24,11 @@ Hai Juga
 - [x] **TODO 10**: Perbarui method `displayAccount()` agar mencetak informasi kartu ATM (Nomor masked dan status AKTIF/TERBLOKIR).
 
 ### 3. File `com.ambank.model.BusinessAccount`
-- [ ] **TODO 11**: Tambahkan konstanta `BUSINESS_TRANSFER_LIMIT = 50000000;`.
-- [ ] **TODO 12**: Lengkapi constructor overloading `BusinessAccount(String nameHolder, String NPWP, String noSK)` menggunakan `super(nameHolder)`.
-- [ ] **TODO 13**: Sediakan getter dan setter untuk atribut `NPWP` dan `noSK`.
-- [ ] **TODO 14**: Lakukan `@Override` pada method `getTransferLimit()` agar mengembalikan `BUSINESS_TRANSFER_LIMIT`.
-- [ ] **TODO 15**: Lakukan `@Override` pada method `displayAccount()`: panggil `super.displayAccount()`, lalu tampilkan informasi NPWP dan Nomor SK.
+- [x] **TODO 11**: Tambahkan konstanta `BUSINESS_TRANSFER_LIMIT = 50000000;`.
+- [x] **TODO 12**: Lengkapi constructor overloading `BusinessAccount(String nameHolder, String NPWP, String noSK)` menggunakan `super(nameHolder)`.
+- [x] **TODO 13**: Sediakan getter dan setter untuk atribut `NPWP` dan `noSK`.
+- [x] **TODO 14**: Lakukan `@Override` pada method `getTransferLimit()` agar mengembalikan `BUSINESS_TRANSFER_LIMIT`.
+- [x] **TODO 15**: Lakukan `@Override` pada method `displayAccount()`: panggil `super.displayAccount()`, lalu tampilkan informasi NPWP dan Nomor SK.
 
 ### 4. File `com.ambank.app.Transaction`
 - [ ] **TODO 16**: Ubah validasi batas transfer pada `makeTransaction()` agar menggunakan pemanggilan dinamis `sender.getTransferLimit()` (menerapkan Polimorfisme).

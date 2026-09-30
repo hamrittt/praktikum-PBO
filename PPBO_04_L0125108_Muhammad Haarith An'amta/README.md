@@ -31,8 +31,8 @@ Hai Juga
 - [x] **TODO 15**: Lakukan `@Override` pada method `displayAccount()`: panggil `super.displayAccount()`, lalu tampilkan informasi NPWP dan Nomor SK.
 
 ### 4. File `com.ambank.app.Transaction`
-- [ ] **TODO 16**: Ubah validasi batas transfer pada `makeTransaction()` agar menggunakan pemanggilan dinamis `sender.getTransferLimit()` (menerapkan Polimorfisme).
-- [ ] **TODO 17**: Implementasikan penarikan tunai pada method `tarikUang(Account account, int amount)`.
-- [ ] **TODO 18**: Implementasikan autentikasi PIN pada method `tarikUang(Account account, int amount, String pin)`.
+- [x] **TODO 16**: Ubah validasi batas transfer pada `makeTransaction()` agar menggunakan pemanggilan dinamis `sender.getTransferLimit()` (menerapkan Polimorfisme).
+- [x] **TODO 17**: Implementasikan penarikan tunai pada method `tarikUang(Account account, int amount)`.
+- [x] **TODO 18**: Implementasikan autentikasi PIN pada method `tarikUang(Account account, int amount, String pin)`.
 
 ---

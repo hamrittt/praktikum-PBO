@@ -33,7 +33,7 @@ public class Transaction {
 
         if (((sender.getSaldo() - Account.MINIMUM_SALDO) >= amount) || sender == AMBANK_ACCOUNT) {
             // TODO 16: Ganti Account.TRANSFER_LIMIT dengan sender.getTransferLimit() agar polimorfisme aktif
-            if ((amount > 10000 && amount <= Account.TRANSFER_LIMIT) || sender == AMBANK_ACCOUNT) {
+            if ((amount > 10000 && amount <= sender.getTransferLimit()) || sender == AMBANK_ACCOUNT) {
                 transactions.add(new Transaction(sender, receiver, amount));
                 return true;
             }
@@ -68,12 +68,17 @@ public class Transaction {
     // TODO 17: Tarik tunai ke AMBANK_ACCOUNT menggunakan makeTransaction
     public static boolean tarikUang(Account account, int amount) {
         // TODO 17: implementasikan tarik tunai di sini
-        return false;
+        return makeTransaction(account, AMBANK_ACCOUNT, amount);
     }
 
     // TODO 18: Tarik tunai via ATM (validasi kartu & verifikasi PIN)
     public static boolean tarikUang(Account account, int amount, String pin) {
         // TODO 18: implementasikan verifikasi kartu dan PIN sebelum tarik tunai
+        if (account != null && account.getCard() != null) {
+            if (account.getCard().verifyPin(pin)) {
+                return tarikUang(account, amount);
+            }
+        }
         return false;
     }
 }
